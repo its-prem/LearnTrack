@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | LearnTrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+    <style>
+        /* --- 1. RESET & VARIABLES --- */
+:root {
+    --primary: #0066FF;
+    --gradient: linear-gradient(135deg, #0066FF 0%, #00C6FF 100%);
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    --white: #ffffff;
+    --shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.05);
+    --font: 'Plus Jakarta Sans', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: var(--font); }
+
+body {
+    background: #E0E7FF;
+    display: flex; justify-content: center; align-items: center;
+    min-height: 100vh; position: relative; overflow-x: hidden;
+}
+
+/* Background Shapes */
+.decor-shape { position: absolute; filter: blur(90px); z-index: -1; opacity: 0.6; }
+.shape-1 { width: 400px; height: 400px; background: #60A5FA; top: -10%; left: -10%; border-radius: 50%; }
+.shape-2 { width: 300px; height: 300px; background: #A78BFA; bottom: -10%; right: -10%; border-radius: 50%; }
+
+/* --- 2. MAIN CONTAINER --- */
+.container {
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    width: 850px;
+    max-width: 100%;
+    min-height: 550px;
+}
+
+.form-container {
+    position: absolute; top: 0; height: 100%; transition: all 0.6s ease-in-out;
+}
+
+form {
+    background: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; padding: 0 50px; height: 100%; text-align: center;
+}
+
+/* Typography */
+.title { font-weight: 800; margin-bottom: 10px; color: var(--text-dark); font-size: 2.2rem; }
+.sub-text { font-size: 14px; color: var(--text-light); margin-bottom: 30px; }
+
+/* Social Icons */
+.social-container { margin: 15px 0 20px; }
+.social {
+    border: 1px solid #e2e8f0; border-radius: 12px;
+    display: inline-flex; justify-content: center; align-items: center;
+    margin: 0 8px; height: 45px; width: 45px; color: var(--text-dark);
+    text-decoration: none; transition: 0.3s; background: #f8fafc; font-size: 18px;
+}
+.social:hover { background: var(--primary); color: white; border-color: var(--primary); transform: translateY(-3px); }
+
+/* Inputs */
+.input-field { position: relative; width: 100%; margin: 12px 0; }
+.input-field i { position: absolute; left: 18px; top: 50%; transform: translateY(-50%); color: #94a3b8; font-size: 16px; }
+.input-field .toggle-pass { left: auto; right: 18px; cursor: pointer; } 
+
+.input-field input {
+    background-color: #F8FAFC; border: 2px solid transparent;
+    padding: 16px 45px 16px 50px; width: 100%; border-radius: 12px;
+    font-size: 15px; outline: none; transition: 0.3s; color: var(--text-dark); font-weight: 500;
+}
+.input-field input:focus { background-color: #fff; border-color: var(--primary); box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.1); }
+.input-field input:focus + i { color: var(--primary); }
+
+/* Buttons */
+.btn-gradient {
+    border-radius: 50px; border: none; background: var(--gradient);
+    color: var(--white); font-size: 16px; font-weight: 700;
+    padding: 14px 0; width: 100%; letter-spacing: 1px; text-transform: uppercase;
+    transition: 0.3s; margin-top: 25px; cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.3);
+}
+.btn-gradient:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0, 102, 255, 0.4); }
+
+.btn-outline {
+    background: transparent; border: 2px solid var(--white);
+    border-radius: 50px; color: var(--white); font-size: 14px;
+    font-weight: 700; padding: 12px 45px; cursor: pointer; margin-top: 20px; transition: 0.3s;
+}
+.btn-outline:hover { background: var(--white); color: var(--primary); }
+
+.forgot-pass { color: var(--text-light); font-size: 13px; text-decoration: none; margin: 15px 0 5px; font-weight: 600; }
+.forgot-pass:hover { color: var(--primary); text-decoration: underline; }
+
+/* --- DESKTOP SLIDER LOGIC --- */
+.sign-in-container { left: 0; width: 50%; z-index: 2; }
+.container.right-panel-active .sign-in-container { transform: translateX(100%); }
+.sign-up-container { left: 0; width: 50%; opacity: 0; z-index: 1; }
+.container.right-panel-active .sign-up-container { transform: translateX(100%); opacity: 1; z-index: 5; animation: show 0.6s; }
+@keyframes show { 0%, 49.99% { opacity: 0; z-index: 1; } 50%, 100% { opacity: 1; z-index: 5; } }
+
+/* Overlay */
+.overlay-container {
+    position: absolute; top: 0; left: 50%; width: 50%; height: 100%;
+    overflow: hidden; transition: transform 0.6s ease-in-out; z-index: 100;
+    border-top-right-radius: 20px; border-bottom-right-radius: 20px;
+}
+.container.right-panel-active .overlay-container { transform: translateX(-100%); border-radius: 20px 0 0 20px; }
+.overlay {
+    background: var(--gradient); color: var(--white); position: relative;
+    left: -100%; height: 100%; width: 200%; transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+.container.right-panel-active .overlay { transform: translateX(50%); }
+.overlay-panel {
+    position: absolute; display: flex; align-items: center; justify-content: center;
+    flex-direction: column; padding: 0 40px; text-align: center;
+    top: 0; height: 100%; width: 50%; transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+.overlay-left { transform: translateX(-20%); }
+.container.right-panel-active .overlay-left { transform: translateX(0); }
+.overlay-right { right: 0; transform: translateX(0); }
+.container.right-panel-active .overlay-right { transform: translateX(20%); }
+
+/* Mobile Only Elements Defaults */
+.mobile-toggle-text { display: none; margin-top: 25px; font-size: 14px; color: var(--text-light); }
+.mobile-toggle-text span { color: var(--primary); font-weight: 700; cursor: pointer; text-decoration: underline; margin-left: 5px; }
+.mobile-only { display: none; }
+
+/* Back Button Desktop */
+.back-home {
+    position: absolute; top: 25px; left: 25px; font-size: 14px;
+    color: var(--text-light); font-weight: 700; z-index: 200;
+    display: flex; align-items: center; gap: 5px; text-decoration: none;
+}
+.back-home:hover { color: var(--primary); }
+
+/* --- 5. MOBILE FIXES (THE SOLUTION) --- */
+@media (max-width: 768px) {
+    body { padding: 0; background: #fff; overflow-y: auto; display: block; }
+
+    .container {
+        width: 100%; min-height: 100vh;
+        border-radius: 0; box-shadow: none;
+        margin: 0; padding-top: 0;
+        background: transparent;
+    }
+
+    /* Hide Desktop Slider Overlay Completely */
+    .overlay-container { display: none !important; }
+    .desktop-only { display: none !important; }
+    
+    /* Mobile Back Button */
+    .mobile-only { 
+        display: flex; position: absolute; top: 20px; left: 20px; 
+        font-size: 20px; color: var(--text-dark); background: #f1f5f9;
+        padding: 10px; border-radius: 50%; width: 40px; height: 40px;
+        justify-content: center; align-items: center; z-index: 100;
+    }
+
+    /* Reset Form Positioning */
+    .form-container {
+        position: absolute; /* Stack on top */
+        top: 0; left: 0;
+        width: 100%; height: auto; min-height: 100vh;
+        padding: 80px 25px 40px; 
+        transition: opacity 0.3s ease; /* Fade effect instead of slide */
+        background: white;
+    }
+
+    /* --- LOGIC: VISIBILITY TOGGLE --- */
+    
+    /* 1. Default State: Show Login, Hide Signup */
+    .sign-in-container {
+        opacity: 1; pointer-events: all; z-index: 5;
+    }
+    .sign-up-container {
+        opacity: 0; pointer-events: none; z-index: 1;
+    }
+
+    /* 2. Active State (Class added): Hide Login, Show Signup */
+    .container.right-panel-active .sign-in-container {
+        opacity: 0; pointer-events: none; z-index: 1;
+    }
+    
+    .container.right-panel-active .sign-up-container { 
+        opacity: 1; pointer-events: all; z-index: 5;
+    }
+
+  
+
+    /* Show Switch Options */
+    .mobile-toggle-text { display: block; }
+
+    /* Better Touch Targets */
+    .input-field input { padding: 16px 15px 16px 45px; font-size: 16px; }
+    .btn-gradient { padding: 16px 0; margin-top: 30px; font-size: 16px; }
+    .title { font-size: 2.2rem; margin-top: 20px; }
+}
+    </style>
+</head>
+<body>
+
+    <div class="decor-shape shape-1"></div>
+    <div class="decor-shape shape-2"></div>
+
+    <div class="container" id="container">
+        
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <a href="index.html" class="back-home mobile-only"><i class="fa-solid fa-arrow-left"></i></a>
+                
+                <h1 class="title">Create Account</h1>
+                <span class="sub-text">Enter details to get started</span>
+                
+                <div class="input-field">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Full Name" required />
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Email" required />
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Password" id="reg-pass" required />
+                    <i class="fa-solid fa-eye toggle-pass" onclick="togglePassword('reg-pass', this)"></i>
+                </div>
+                
+                <button class="btn-gradient">Sign Up</button>
+                
+                <div class="mobile-toggle-text">
+                    Already have an account? <span id="mobile-signIn">Sign In</span>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <a href="index.html" class="back-home mobile-only"><i class="fa-solid fa-arrow-left"></i></a>
+
+                <h1 class="title">Welcome Back</h1>
+                <span class="sub-text">Enter your credentials to login</span>
+                
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Email" required />
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Password" id="login-pass" required />
+                    <i class="fa-solid fa-eye toggle-pass" onclick="togglePassword('login-pass', this)"></i>
+                </div>
+                
+                <a href="#" class="forgot-pass">Forgot your password?</a>
+                <button class="btn-gradient">Sign In</button>
+
+                <div class="mobile-toggle-text">
+                    Don't have an account? <span id="mobile-signUp">Sign Up</span>
+                </div>
+            </form>
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="btn-outline" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start your journey with LearnTrack</p>
+                    <button class="btn-outline" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-home desktop-only"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+    </div>
+
+    <script>
+        const container = document.getElementById('container');
+        
+        // Desktop Buttons
+        const signUpBtn = document.getElementById('signUp');
+        const signInBtn = document.getElementById('signIn');
+
+        // Mobile Buttons
+        const mSignUp = document.getElementById('mobile-signUp');
+        const mSignIn = document.getElementById('mobile-signIn');
+
+        // Function to Switch to Sign Up
+        function showSignUp() {
+            container.classList.add("right-panel-active");
+        }
+
+        // Function to Switch to Sign In
+        function showSignIn() {
+            container.classList.remove("right-panel-active");
+        }
+
+        // Event Listeners (Unified Logic)
+        signUpBtn.addEventListener('click', showSignUp);
+        signInBtn.addEventListener('click', showSignIn);
+        
+        mSignUp.addEventListener('click', showSignUp);
+        mSignIn.addEventListener('click', showSignIn);
+
+        // Password Toggle
+        function togglePassword(inputId, icon) {
+            const input = document.getElementById(inputId);
+            if (input.type === "password") {
+                input.type = "text";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            } else {
+                input.type = "password";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            }
+        }
+    </script>
+</body>
+</html>

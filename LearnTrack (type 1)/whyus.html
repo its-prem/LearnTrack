@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why LearnTrack? | Features & Benefits</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">       
+    <link rel="stylesheet" href="why-us-pro.css">  
+    <style>
+        /* --- HERO SECTION --- */
+.why-hero {
+    padding-top: 140px; 
+    padding-bottom: 80px;
+    background: radial-gradient(circle at top left, #F0F9FF 0%, #FFFFFF 60%);
+    overflow: hidden;
+}
+
+.hero-flex {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-text { flex: 1; }
+
+.badge-soft {
+    background: #E0F2FE; 
+    color: #0066FF;
+    padding: 8px 16px; 
+    border-radius: 30px;
+    font-size: 13px; 
+    font-weight: 700; 
+    display: inline-block; 
+    margin-bottom: 24px;
+    border: 1px solid #BAE6FD;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    line-height: 1.1;
+    color: #0F172A;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.125rem;
+    color: #64748B;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-top: 1px solid #E2E8F0;
+    padding-top: 25px;
+}
+
+.stat b { font-size: 24px; color: #0066FF; display: block; }
+.stat span { font-size: 14px; color: #64748B; font-weight: 600; }
+.divider { width: 1px; height: 40px; background: #E2E8F0; }
+
+/* Hero Image */
+.hero-img { flex: 1; position: relative; }
+
+.image-card {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    transform: rotate(2deg);
+    transition: 0.3s;
+    border: 4px solid white;
+}
+
+.image-card:hover { transform: rotate(0deg); }
+.image-card img { width: 100%; display: block; }
+
+.floating-badge {
+    position: absolute;
+    background: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    animation: float 3s ease-in-out infinite;
+    color: #0F172A;
+}
+
+.fb-1 { top: 20%; right: -20px; color: #0066FF; }
+.fb-2 { bottom: 20%; left: -20px; color: #10B981; animation-delay: 1.5s; }
+
+/* --- FEATURES GRID --- */
+.icon-box {
+    width: 60px; height: 60px;
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; margin-bottom: 20px;
+}
+
+/* Icon Colors */
+.blue { background: #EFF6FF; color: #0066FF; }
+.purple { background: #F5F3FF; color: #8B5CF6; }
+.orange { background: #FFF7ED; color: #F97316; }
+.green { background: #ECFDF5; color: #10B981; }
+.red { background: #FEF2F2; color: #EF4444; }
+.yellow { background: #FEFCE8; color: #EAB308; }
+
+.feature-card p {
+    color: #64748B;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+    color: #0F172A;
+}
+
+/* --- COMPARISON TABLE (Responsive) --- */
+.table-scroll {
+    overflow-x: auto; /* Enable Horizontal Scroll on Mobile */
+    padding-bottom: 20px;
+}
+
+.comparison-wrapper {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    border: 1px solid #E2E8F0;
+    min-width: 600px; /* Forces width so it doesn't squish on mobile */
+}
+
+.tbl-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: #F8FAFC;
+    padding: 20px;
+    font-weight: 800;
+    color: #334155;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.brand-col { color: #0066FF; font-size: 20px; }
+
+.tbl-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+    border-bottom: 1px solid #F1F5F9;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.tbl-row:hover { background: #FAFAFA; }
+
+.col-1 { font-weight: 600; color: #0F172A; }
+.col-2 { font-weight: 700; color: #0066FF; display: flex; align-items: center; gap: 8px; }
+.col-3 { color: #94A3B8; text-decoration: line-through; }
+
+/* --- CTA STRIP (Contact) --- */
+.cta-strip {
+    background: linear-gradient(135deg, #0066FF 0%, #00C6FF 100%);
+    padding: 60px 0;
+    margin-top: 50px;
+}
+
+.cta-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.cta-text h2 { font-size: 32px; margin-bottom: 10px; }
+
+.cta-buttons { display: flex; gap: 15px; }
+
+.btn-white {
+    background: white; color: #0066FF;
+    border: none; padding: 15px 30px;
+    border-radius: 50px; font-weight: 700; font-size: 18px;
+    cursor: pointer; display: inline-flex; align-items: center; gap: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn-white:hover { transform: translateY(-3px); }
+
+.pulse-btn { animation: pulse-white 2s infinite; }
+
+@keyframes pulse-white {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+.btn-outline-white {
+    background: transparent; color: white;
+    border: 2px solid rgba(255,255,255,0.3);
+    padding: 15px 30px; border-radius: 50px;
+    font-weight: 600; font-size: 16px;
+    display: inline-flex; align-items: center; gap: 10px;
+}
+
+.btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color: white; }
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 900px) {
+    .hero-flex { flex-direction: column; text-align: center; }
+    .hero-stats { justify-content: center; flex-wrap: wrap; }
+    
+    .cta-flex { flex-direction: column; text-align: center; gap: 30px; }
+    .cta-buttons { flex-direction: column; width: 100%; }
+    .btn-white, .btn-outline-white { justify-content: center; width: 100%; }
+}
+
+@media (max-width: 768px) {
+    .section { padding: 60px 0; }
+    
+    .grid-3 { grid-template-columns: 1fr; gap: 20px; }
+    
+    .hero-text h1 { font-size: 2.5rem; }
+    .floating-badge { font-size: 12px; padding: 8px 15px; }
+    
+    /* Table scroll hint */
+    .table-scroll::after {
+        content: 'Scroll ->';
+        display: block; text-align: right; color: #94A3B8; font-size: 12px; margin-top: 5px;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="brand">
+                <div class="brand-icon">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="36" height="36" rx="8" fill="url(#gradient)"/>
+                        <path d="M12 10L18 18L12 26" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20 10L26 18L20 26" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0" y1="0" x2="36" y2="36">
+                                <stop offset="0%" stop-color="#0066FF"/>
+                                <stop offset="100%" stop-color="#00C6FF"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span>LearnTrack</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#program">Programs</a></li>
+                <li><a href="whyus.html" class="active">Why Us</a></li>
+                <li><a href="index.html#reviews">Success Stories</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="tel:9153950552" class="login-link"><i class="fa-solid fa-phone"></i> 9153950552</a>
+                <a href="index.html#program" class="btn-primary small">Start Free</a>
+            </div>
+            <button class="menu-toggle" aria-label="Open Menu">
+                <div class="bar top"></div><div class="bar mid"></div><div class="bar bot"></div>
+            </button>
+        </div>
+        <div class="mobile-menu">
+            <div class="mobile-links">
+                <a href="index.html" class="m-link"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="index.html#program" class="m-link"><i class="fa-solid fa-layer-group"></i> Programs</a>
+                <a href="whyus.html" class="m-link active"><i class="fa-solid fa-star"></i> Why Us</a>
+                <a href="tel:9153950552" class="m-link"><i class="fa-solid fa-phone"></i> Call: 9153950552</a>
+            </div>
+            <div class="mobile-btns"><button class="btn-primary full">Get Started</button></div>
+        </div>
+    </nav>
+
+    <header class="why-hero">
+        <div class="container hero-flex">
+            <div class="hero-text reveal-left">
+                <span class="badge-soft">🏆 India's Most Advanced Curriculum</span>
+                <h1>Bridge The Gap Between <br> <span class="gradient-text">Learning & Earning.</span></h1>
+                <p>We don't just teach coding; we build Software Engineers. Experience the <strong>Hybrid Learning Model</strong>—Live Mentorship combined with HD Recorded lectures.</p>
+                <div class="hero-stats">
+                    <div class="stat"><b>15k+</b><span>Students</span></div>
+                    <div class="divider"></div>
+                    <div class="stat"><b>100%</b><span>Placement Asst.</span></div>
+                    <div class="divider"></div>
+                    <div class="stat"><b>4.9/5</b><span>Rating</span></div>
+                </div>
+            </div>
+            <div class="hero-img reveal-right">
+                <div class="image-card">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mentorship">
+                    <div class="floating-badge fb-1"><i class="fa-solid fa-check-circle"></i> Live Classes</div>
+                    <div class="floating-badge fb-2"><i class="fa-solid fa-infinity"></i> Lifetime Access</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-head center">
+                <span class="sub-head">What You Get</span>
+                <h2>Everything You Need To Succeed</h2>
+                <p style="color: #64748B; margin-top: 10px; max-width: 600px; margin-inline: auto;">We provide an ecosystem for learning, practicing, and getting hired.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="feature-card reveal">
+                    <div class="icon-box blue"><i class="fa-solid fa-video"></i></div>
+                    <h3>Hybrid Learning</h3>
+                    <p>Get the best of both worlds. Attend <strong>Daily Live Classes</strong> for doubts and interaction, plus get access to <strong>HD Recorded Lectures</strong> for revision anytime.</p>
+                </div>
+
+                <div class="feature-card reveal delay-1">
+                    <div class="icon-box purple"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Performance Tracking</h3>
+                    <p>Our AI-powered dashboard tracks your coding speed, assignment scores, and attendance. We provide weekly reports to keep you on track.</p>
+                </div>
+
+                <div class="feature-card reveal delay-2">
+                    <div class="icon-box orange"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3>Real-Life Projects</h3>
+                    <p>Stop building To-Do lists. Build full-stack clones of <strong>Netflix, Amazon, and Zomato</strong>. Deploy them live on AWS/Vercel for your portfolio.</p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="icon-box green"><i class="fa-solid fa-comments"></i></div>
+                    <h3>Instant Doubt Support</h3>
+                    <p>Stuck on a bug? Our Teaching Assistants are available <strong>12 hours a day</strong> via Zoom and Chat to debug your code instantly.</p>
+                </div>
+
+                <div class="feature-card reveal delay-1">
+                    <div class="icon-box red"><i class="fa-solid fa-user-tie"></i></div>
+                    <h3>Placement Cell</h3>
+                    <p>We don't leave you after the course. We provide Resume Building, LinkedIn Optimization, Mock Interviews, and <strong>Referrals</strong>.</p>
+                </div>
+
+                <div class="feature-card reveal delay-2">
+                    <div class="icon-box yellow"><i class="fa-solid fa-certificate"></i></div>
+                    <h3>ISO Certified</h3>
+                    <p>Earn a globally recognized certificate upon completion. Validate your skills on LinkedIn and add weight to your CV.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-soft">
+        <div class="container">
+            <div class="section-head center">
+                <h2>Why Students Choose LearnTrack</h2>
+            </div>
+            
+            <div class="table-scroll">
+                <div class="comparison-wrapper reveal-up">
+                    <div class="tbl-header">
+                        <div class="col-1">Feature</div>
+                        <div class="col-2 brand-col">LearnTrack</div>
+                        <div class="col-3">Others</div>
+                    </div>
+                    <div class="tbl-row">
+                        <div class="col-1">Lecture Type</div>
+                        <div class="col-2"><i class="fa-solid fa-check-circle"></i> Live + Recorded</div>
+                        <div class="col-3 text-muted">Only Recorded</div>
+                    </div>
+                    <div class="tbl-row">
+                        <div class="col-1">Doubt Support</div>
+                        <div class="col-2"><i class="fa-solid fa-check-circle"></i> Instant 1:1 Zoom</div>
+                        <div class="col-3 text-muted">Email (24hrs wait)</div>
+                    </div>
+                    <div class="tbl-row">
+                        <div class="col-1">Project Work</div>
+                        <div class="col-2"><i class="fa-solid fa-check-circle"></i> 15+ Capstone Projects</div>
+                        <div class="col-3 text-muted">Basic Theory</div>
+                    </div>
+                    <div class="tbl-row">
+                        <div class="col-1">Placement</div>
+                        <div class="col-2"><i class="fa-solid fa-check-circle"></i> 100% Guaranteed Calls</div>
+                        <div class="col-3 text-muted">No Assistance</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-strip">
+        <div class="container cta-flex">
+            <div class="cta-text">
+                <h2>Confused about your career path?</h2>
+                <p>Talk to our expert career counsellors for free guidance.</p>
+            </div>
+            <div class="cta-buttons">
+                <a href="tel:9153950552" class="btn-white pulse-btn">
+                    <i class="fa-solid fa-phone"></i> +91 9153950552
+                </a>
+                <a href="https://wa.me/919153950552" class="btn-outline-white">
+                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="brand footer-logo">
+                        <div class="brand-icon">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="36" height="36" rx="8" fill="url(#gradient2)"/>
+                                <path d="M12 10L18 18L12 26" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M20 10L26 18L20 26" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+                                <defs>
+                                    <linearGradient id="gradient2" x1="0" y1="0" x2="36" y2="36">
+                                        <stop offset="0%" stop-color="#0066FF"/>
+                                        <stop offset="100%" stop-color="#00C6FF"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <span>LearnTrack</span>
+                    </div>
+                    <p>Empowering the next generation of software engineers with industry-leading curriculum.</p>
+                    <p style="margin-top: 15px; color: #fff; font-weight: bold;"><i class="fa-solid fa-phone"></i> +91 9153950552</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Mentors</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <a href="#">Blog</a>
+                    <a href="#">Success Stories</a>
+                    <a href="#">Community</a>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <form class="news-form">
+                        <input type="email" placeholder="Enter email">
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LearnTrack Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
