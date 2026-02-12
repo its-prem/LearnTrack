@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - LearnTrack</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        Learn<span>Track</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="tracks.html">Learning Tracks</a></li>
+        <li><a href="internships.html">Internships</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="cta-btn active">Get Started</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Let's <span class="highlight">Get Started</span></h1>
+      <p>Have questions? Want to enroll? Our team is here to help you begin your learning journey.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM SECTION -->
+  <section class="section">
+    <h2 class="section-title">📬 Get in Touch</h2>
+    <p class="section-subtitle">Fill out the form below and we'll get back to you within 24 hours</p>
+    
+    <div class="contact-form">
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" required placeholder="Enter your full name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" required placeholder="+91 9876543210">
+        </div>
+
+        <div class="form-group">
+          <label for="interest">What are you interested in? *</label>
+          <select id="interest" name="interest" required>
+            <option value="">Select an option</option>
+            <option value="fullstack">Full Stack Development Track</option>
+            <option value="ai-ml">AI & Machine Learning Track</option>
+            <option value="mobile">Mobile App Development Track</option>
+            <option value="data-science">Data Science Track</option>
+            <option value="ui-ux">UI/UX Design Track</option>
+            <option value="devops">DevOps Track</option>
+            <option value="internship">Internship Opportunities</option>
+            <option value="other">Other / General Inquiry</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="experience">Current Experience Level</label>
+          <select id="experience" name="experience">
+            <option value="">Select your level</option>
+            <option value="beginner">Complete Beginner</option>
+            <option value="some-knowledge">Some Knowledge</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message *</label>
+          <textarea id="message" name="message" required placeholder="Tell us about your goals, questions, or anything else..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message →</button>
+      </form>
+
+      <div id="formSuccess" style="display: none; text-align: center; padding: 2rem; background: #d4edda; border: 2px solid #c3e6cb; border-radius: 8px; margin-top: 2rem;">
+        <h3 style="color: #155724; margin-bottom: 0.5rem;">✅ Message Sent Successfully!</h3>
+        <p style="color: #155724;">We'll get back to you within 24 hours. Check your email for confirmation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT INFO -->
+  <section class="section bg-gray">
+    <h2 class="section-title">📞 Other Ways to Reach Us</h2>
+    
+    <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+      <div class="card" style="text-align: center;">
+        <div class="card-icon">📧</div>
+        <h3>Email Us</h3>
+        <p style="color: var(--neon-green); font-weight: 600; margin-top: 1rem;">info@learntrack.com</p>
+        <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">We respond within 24 hours</p>
+      </div>
+
+      <div class="card" style="text-align: center;">
+        <div class="card-icon">📱</div>
+        <h3>Call Us</h3>
+        <p style="color: var(--neon-green); font-weight: 600; margin-top: 1rem;">+91 98765 43210</p>
+        <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">Mon-Sat, 10 AM - 7 PM IST</p>
+      </div>
+
+      <div class="card" style="text-align: center;">
+        <div class="card-icon">💬</div>
+        <h3>Live Chat</h3>
+        <p style="color: var(--neon-green); font-weight: 600; margin-top: 1rem;">Chat Support</p>
+        <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">Available 10 AM - 7 PM IST</p>
+      </div>
+
+      <div class="card" style="text-align: center;">
+        <div class="card-icon">📍</div>
+        <h3>Visit Us</h3>
+        <p style="color: var(--neon-green); font-weight: 600; margin-top: 1rem;">Bangalore, India</p>
+        <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">Schedule an appointment first</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section">
+    <h2 class="section-title">❓ Frequently Asked Questions</h2>
+    <p class="section-subtitle">Quick answers to common questions</p>
+    
+    <div style="max-width: 800px; margin: 3rem auto;">
+      <div style="margin-bottom: 2rem; padding: 1.5rem; background: white; border: 2px solid #e0e0e0; border-radius: 12px;">
+        <h3 style="margin-bottom: 1rem; color: var(--black);">How long does it take to complete a learning track?</h3>
+        <p style="color: #666; line-height: 1.7;">Most tracks take 4-6 months to complete if you dedicate 10-20 hours per week. You can go faster or slower based on your schedule.</p>
+      </div>
+
+      <div style="margin-bottom: 2rem; padding: 1.5rem; background: white; border: 2px solid #e0e0e0; border-radius: 12px;">
+        <h3 style="margin-bottom: 1rem; color: var(--black);">Are internships really guaranteed?</h3>
+        <p style="color: #666; line-height: 1.7;">Yes! When you successfully complete a learning track with all projects and assessments, we guarantee placement in a 3-6 month internship with our partner companies.</p>
+      </div>
+
+      <div style="margin-bottom: 2rem; padding: 1.5rem; background: white; border: 2px solid #e0e0e0; border-radius: 12px;">
+        <h3 style="margin-bottom: 1rem; color: var(--black);">What if I'm a complete beginner?</h3>
+        <p style="color: #666; line-height: 1.7;">Perfect! Our tracks are designed for beginners. We start from the basics and gradually build your skills step by step.</p>
+      </div>
+
+      <div style="margin-bottom: 2rem; padding: 1.5rem; background: white; border: 2px solid #e0e0e0; border-radius: 12px;">
+        <h3 style="margin-bottom: 1rem; color: var(--black);">Do you offer EMI or payment plans?</h3>
+        <p style="color: #666; line-height: 1.7;">Yes! We offer flexible EMI options starting from ₹3,000/month. We also have scholarships available for deserving students.</p>
+      </div>
+
+      <div style="margin-bottom: 2rem; padding: 1.5rem; background: white; border: 2px solid #e0e0e0; border-radius: 12px;">
+        <h3 style="margin-bottom: 1rem; color: var(--black);">Can I get a refund if I'm not satisfied?</h3>
+        <p style="color: #666; line-height: 1.7;">We offer a 7-day money-back guarantee. If you're not satisfied within the first week, we'll give you a full refund, no questions asked.</p>
+      </div>
+
+      <div style="padding: 1.5rem; background: white; border: 2px solid #e0e0e0; border-radius: 12px;">
+        <h3 style="margin-bottom: 1rem; color: var(--black);">Will I get a certificate after completion?</h3>
+        <p style="color: #666; line-height: 1.7;">Yes! You'll receive industry-recognized certificates for each course you complete, plus a track completion certificate that you can add to your LinkedIn and resume.</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-3">
+      <p style="color: #666; margin-bottom: 1rem;">Still have questions?</p>
+      <a href="#contactForm" class="btn-secondary">Ask Us Anything →</a>
+    </div>
+  </section>
+
+  <!-- SOCIAL MEDIA -->
+  <section class="section bg-gray">
+    <h2 class="section-title">🌐 Connect With Us</h2>
+    <p class="section-subtitle">Follow us for updates, tips, and success stories</p>
+    
+    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
+      <a href="#" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--black); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="width: 80px; height: 80px; background: var(--neon-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin-bottom: 0.5rem;">💼</div>
+        <strong>LinkedIn</strong>
+        <span style="color: #666; font-size: 0.9rem;">5K+ followers</span>
+      </a>
+
+      <a href="#" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--black); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="width: 80px; height: 80px; background: var(--neon-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin-bottom: 0.5rem;">🐦</div>
+        <strong>Twitter</strong>
+        <span style="color: #666; font-size: 0.9rem;">3K+ followers</span>
+      </a>
+
+      <a href="#" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--black); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="width: 80px; height: 80px; background: var(--neon-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin-bottom: 0.5rem;">📸</div>
+        <strong>Instagram</strong>
+        <span style="color: #666; font-size: 0.9rem;">8K+ followers</span>
+      </a>
+
+      <a href="#" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--black); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="width: 80px; height: 80px; background: var(--neon-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin-bottom: 0.5rem;">📺</div>
+        <strong>YouTube</strong>
+        <span style="color: #666; font-size: 0.9rem;">12K+ subscribers</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>LearnTrack</h3>
+        <p>Empowering the next generation of tech professionals with structured learning and guaranteed career opportunities.</p>
+        <div class="social-links">
+          <a href="#" aria-label="LinkedIn">💼</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Instagram">📸</a>
+          <a href="#" aria-label="YouTube">📺</a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="courses.html">All Courses</a></li>
+          <li><a href="tracks.html">Learning Tracks</a></li>
+          <li><a href="internships.html">Internships</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul class="footer-links">
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Community</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Legal</h3>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 LearnTrack. All rights reserved. Built with 💚 for learners.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Form submission handler
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Simulate form submission
+      setTimeout(() => {
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+        
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          document.getElementById('contactForm').reset();
+          document.getElementById('contactForm').style.display = 'block';
+          document.getElementById('formSuccess').style.display = 'none';
+        }, 3000);
+      }, 500);
+    });
+  </script>
+</body>
+</html>

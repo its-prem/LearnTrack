@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses - LearnTrack</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        Learn<span>Track</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html" class="active">Courses</a></li>
+        <li><a href="tracks.html">Learning Tracks</a></li>
+        <li><a href="internships.html">Internships</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="cta-btn">Get Started</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Browse Our <span class="highlight">Expert-Led Courses</span></h1>
+      <p>From beginner to advanced, find courses that match your learning goals and career aspirations.</p>
+    </div>
+  </section>
+
+  <!-- COURSES SECTION -->
+  <section class="section">
+    <h2 class="section-title">🎓 All Courses</h2>
+    
+    <!-- Filters -->
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All Courses</button>
+      <button class="filter-btn" data-filter="web">Web Development</button>
+      <button class="filter-btn" data-filter="mobile">Mobile Development</button>
+      <button class="filter-btn" data-filter="data">Data Science</button>
+      <button class="filter-btn" data-filter="ai">AI/ML</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+    </div>
+
+    <!-- Course Cards -->
+    <div class="cards-grid" id="coursesGrid">
+      <!-- Web Development Courses -->
+      <div class="course-card" data-category="web">
+        <div class="course-image">🌐</div>
+        <div class="course-content">
+          <span class="course-tag">Beginner</span>
+          <h3>Complete HTML & CSS Masterclass</h3>
+          <p>Learn to build beautiful, responsive websites from scratch. Perfect for absolute beginners.</p>
+          <div class="course-meta">
+            <span>⏱️ 8 weeks</span>
+            <span>📊 15 projects</span>
+            <span>⭐ 4.8/5</span>
+          </div>
+          <div class="course-price">
+            <span class="price">₹2,999</span>
+            <a href="contact.html" class="enroll-btn">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" data-category="web">
+        <div class="course-image">⚛️</div>
+        <div class="course-content">
+          <span class="course-tag">Intermediate</span>
+          <h3>React.js - Build Modern Web Apps</h3>
+          <p>Master React and build dynamic, scalable applications with hooks, context, and Redux.</p>
+          <div class="course-meta">
+            <span>⏱️ 10 weeks</span>
+            <span>📊 12 projects</span>
+            <span>⭐ 4.9/5</span>
+          </div>
+          <div class="course-price">
+            <span class="price">₹4,999</span>
+            <a href="contact.html" class="enroll-btn">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" data-category="web">
+        <div class="course-image">🟢</div>
+        <div class="course-content">
+          <span class="course-tag">Advanced</span>
+          <h3>Node.js & Backend Development</h3>
+          <p>Build scalable REST APIs, work with databases, authentication, and deployment.</p>
+          <div class="course-meta">
+            <span>⏱️ 12 weeks</span>
+            <span>📊 10 projects</span>
+            <span>⭐ 4.7/5</span>
+          </div>
+          <div class="course-price">
+            <span class="price">₹5,999</span>
+            <a href="contact.html" class="enroll-btn">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Development Courses -->
+      <div class="course-card" data-category="mobile">
+        <div class="course-image">📱</div>
+        <div class="course-content">
+          <span class="course-tag">Intermediate</span>
+          <h3>React Native - Cross Platform Apps</h3>
+          <p>Build iOS and Android apps with one codebase. From basics to app store deployment.</p>
+          <div class="course-meta">
+            <span>⏱️ 10 weeks</span>
+            <span>📊 8 projects</span>
+            <span>⭐ 4.8/5</span>
+          </div>
+          <div class="course-price">
+            <span class="price">₹6,999</span>
+            <a href="contact.html" class="enroll-btn">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" data-category="mobile">
+        <div class="course-image">🍏</div>
+        <div class="course-content">
+          <span class="course-tag">Advanced</span>
+          <h3>iOS Development with Swift</h3>
+          <p>Master Swift and build native iOS apps. UIKit, SwiftUI, Core Data, and more.</p>
+          <div class="course-meta">
+            <span>⏱️ 14 weeks</span>
+            <span>📊 10 projects</span>
+            <span>⭐ 4.9/5</span>
+          </div>
+          <div class="course-price">
+            <span class="price">₹7,999</span>
+            <a href="contact.html" class="enroll-btn">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Science Courses -->
+      <div class="course-card" data-category="data">
+        <div class="course-image">📊</div>
+        <div class="course-content">
+          <span class="course-tag">Beginner</span>
+          <h3>Python for Data Science</h3>
+          <p>Learn Python basics and data analysis with Pandas, NumPy, and data visualization.</p>
+          <div class="course-meta">
+            <span>⏱️ 8 weeks</span>
+            <span>📊 12 projects</span>
+            <span>⭐ 4.7/5</span>
+          </div>
+          <div class="course-price">
+            <span class="price">₹3,999</span>
+            <a href="contact.html" class="enroll-btn">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" data-category="data">
+        <div class="course-image">📈</div>
+        <div class="course-content">
+          <span class="course-tag">Intermediate</span>
+          <h3>Data Analysis & Visualization</h3>
+          <p>Master data cleaning, analysis, and visualization with real-world datasets.</p>
+          <div class="course-meta">
+            <span>⏱️ 10 weeks</span>
+            <span>📊 15 projects</span>
+            <span>⭐ 4.8/5</span>
+          </div>
+          <div class="course-price">
+            <span class="price">₹4,999</span>
+            <a href="contact.html" class="enroll-btn">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI/ML Courses -->
+      <div class="course-card" data-category="ai">
+        <div class="course-image">🤖</div>
+        <div class="course-content">
+          <span class="course-tag">Intermediate</span>
+          <h3>Machine Learning Fundamentals</h3>
+          <p>Learn ML algorithms, model training, and deployment with scikit-learn and Python.</p>
+          <div class="course-meta">
+            <span>⏱️ 12 weeks</span>
+            <span>📊 10 projects</span>
+            <span>⭐ 4.9/5</span>
+          </div>
+          <div class="course-price">
+            <span class="price">₹7,999</span>
+            <a href="contact.html" class="enroll-btn">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" data-category="ai">
+        <div class="course-image">🧠</div>
+        <div class="course-content">
+          <span class="course-tag">Advanced</span>
+          <h3>Deep Learning & Neural Networks</h3>
+          <p>Master TensorFlow, PyTorch, CNNs, RNNs, and build AI applications.</p>
+          <div class="course-meta">
+            <span>⏱️ 14 weeks</span>
+            <span>📊 8 projects</span>
+            <span>⭐ 4.8/5</span>
+          </div>
+          <div class="course-price">
+            <span class="price">₹9,999</span>
+            <a href="contact.html" class="enroll-btn">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Design Courses -->
+      <div class="course-card" data-category="design">
+        <div class="course-image">🎨</div>
+        <div class="course-content">
+          <span class="course-tag">Beginner</span>
+          <h3>UI/UX Design Fundamentals</h3>
+          <p>Learn design principles, Figma, wireframing, prototyping, and user research.</p>
+          <div class="course-meta">
+            <span>⏱️ 8 weeks</span>
+            <span>📊 12 projects</span>
+            <span>⭐ 4.8/5</span>
+          </div>
+          <div class="course-price">
+            <span class="price">₹4,999</span>
+            <a href="contact.html" class="enroll-btn">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" data-category="design">
+        <div class="course-image">✨</div>
+        <div class="course-content">
+          <span class="course-tag">Intermediate</span>
+          <h3>Advanced Figma & Design Systems</h3>
+          <p>Master Figma, build design systems, component libraries, and collaborate effectively.</p>
+          <div class="course-meta">
+            <span>⏱️ 10 weeks</span>
+            <span>📊 10 projects</span>
+            <span>⭐ 4.9/5</span>
+          </div>
+          <div class="course-price">
+            <span class="price">₹5,999</span>
+            <a href="contact.html" class="enroll-btn">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" data-category="web">
+        <div class="course-image">💻</div>
+        <div class="course-content">
+          <span class="course-tag">Beginner</span>
+          <h3>JavaScript for Beginners</h3>
+          <p>Master JavaScript fundamentals, DOM manipulation, and build interactive web projects.</p>
+          <div class="course-meta">
+            <span>⏱️ 6 weeks</span>
+            <span>📊 10 projects</span>
+            <span>⭐ 4.7/5</span>
+          </div>
+          <div class="course-price">
+            <span class="price">₹2,999</span>
+            <a href="contact.html" class="enroll-btn">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="section bg-gray">
+    <div class="text-center">
+      <h2 class="section-title">Not Sure Which Course to Choose?</h2>
+      <p class="section-subtitle">Talk to our career counselors for personalized recommendations</p>
+      <a href="contact.html" class="btn-primary">Get Free Counseling →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>LearnTrack</h3>
+        <p>Empowering the next generation of tech professionals with structured learning and guaranteed career opportunities.</p>
+        <div class="social-links">
+          <a href="#" aria-label="LinkedIn">💼</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Instagram">📸</a>
+          <a href="#" aria-label="YouTube">📺</a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="courses.html">All Courses</a></li>
+          <li><a href="tracks.html">Learning Tracks</a></li>
+          <li><a href="internships.html">Internships</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul class="footer-links">
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Community</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Legal</h3>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 LearnTrack. All rights reserved. Built with 💚 for learners.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

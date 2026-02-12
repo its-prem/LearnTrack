@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Tracks - LearnTrack</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        Learn<span>Track</span>
+      </a>
+      <ul class="nav-links" id="navLinks">         
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="tracks.html" class="active">Learning Tracks</a></li>
+        <li><a href="internships.html">Internships</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="cta-btn">Get Started</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Your Complete <span class="highlight">Career Roadmap</span></h1>
+      <p>Structured learning paths from beginner to job-ready. No confusion, just clear steps to your dream career.</p>
+    </div>
+  </section>
+
+  <!-- TRACKS SECTION -->
+  <section class="section">
+    <h2 class="section-title">🗺️ All Learning Tracks</h2>
+    <p class="section-subtitle">Each track includes courses, projects, certifications, and guaranteed internships</p>
+    
+    <div class="cards-grid">
+      <!-- Full Stack Development Track -->
+      <div class="track-card" id="fullstack">
+        <div class="track-header">
+          <div class="track-icon">💻</div>
+          <div>
+            <h3>Full Stack Development Track</h3>
+            <span class="track-duration">⏱️ 6 Months • 15-20 hrs/week</span>
+          </div>
+        </div>
+        <p>Become a complete full-stack developer. Master frontend, backend, databases, deployment, and build 10+ production-ready projects.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--neon-green);">🎯 What You'll Learn:</h4>
+        <div class="track-skills">
+          <span class="skill-tag">HTML5 & CSS3</span>
+          <span class="skill-tag">JavaScript ES6+</span>
+          <span class="skill-tag">React.js</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Express.js</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">Git & GitHub</span>
+          <span class="skill-tag">Deployment</span>
+        </div>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--neon-green);">📚 Included Courses:</h4>
+        <ul style="color: #d0d0d0; margin-left: 1.5rem; line-height: 2;">
+          <li>Complete HTML & CSS Masterclass</li>
+          <li>JavaScript for Beginners</li>
+          <li>React.js - Build Modern Web Apps</li>
+          <li>Node.js & Backend Development</li>
+          <li>Database Design with MongoDB</li>
+          <li>Full Stack Project Capstone</li>
+        </ul>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--neon-green);">💼 Career Outcomes:</h4>
+        <ul style="color: #d0d0d0; margin-left: 1.5rem; line-height: 2;">
+          <li>Full Stack Developer positions</li>
+          <li>Frontend/Backend Developer roles</li>
+          <li>Guaranteed 3-month paid internship</li>
+          <li>Portfolio with 10+ live projects</li>
+        </ul>
+
+        <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+          <a href="contact.html" class="track-btn">Enroll Now - ₹29,999</a>
+          <a href="#" class="track-btn" style="background: transparent; border: 2px solid var(--neon-green);">Download Syllabus</a>
+        </div>
+      </div>
+
+      <!-- AI & Machine Learning Track -->
+      <div class="track-card" id="ai-ml">
+        <div class="track-header">
+          <div class="track-icon">🤖</div>
+          <div>
+            <h3>AI & Machine Learning Track</h3>
+            <span class="track-duration">⏱️ 5 Months • 12-18 hrs/week</span>
+          </div>
+        </div>
+        <p>Master Python, data science, machine learning algorithms, and deep learning. Build AI applications and predictive models.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--neon-green);">🎯 What You'll Learn:</h4>
+        <div class="track-skills">
+          <span class="skill-tag">Python Programming</span>
+          <span class="skill-tag">NumPy & Pandas</span>
+          <span class="skill-tag">Data Visualization</span>
+          <span class="skill-tag">Machine Learning</span>
+          <span class="skill-tag">Scikit-learn</span>
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">Neural Networks</span>
+          <span class="skill-tag">NLP Basics</span>
+          <span class="skill-tag">Model Deployment</span>
+        </div>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--neon-green);">📚 Included Courses:</h4>
+        <ul style="color: #d0d0d0; margin-left: 1.5rem; line-height: 2;">
+          <li>Python for Data Science</li>
+          <li>Data Analysis & Visualization</li>
+          <li>Machine Learning Fundamentals</li>
+          <li>Deep Learning & Neural Networks</li>
+          <li>NLP and Computer Vision Basics</li>
+          <li>ML Project Capstone</li>
+        </ul>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--neon-green);">💼 Career Outcomes:</h4>
+        <ul style="color: #d0d0d0; margin-left: 1.5rem; line-height: 2;">
+          <li>ML Engineer / Data Scientist roles</li>
+          <li>AI/ML internship opportunities</li>
+          <li>Portfolio with 8+ ML projects</li>
+          <li>Research paper publication support</li>
+        </ul>
+
+        <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+          <a href="contact.html" class="track-btn">Enroll Now - ₹34,999</a>
+          <a href="#" class="track-btn" style="background: transparent; border: 2px solid var(--neon-green);">Download Syllabus</a>
+        </div>
+      </div>
+
+      <!-- Mobile App Development Track -->
+      <div class="track-card" id="mobile">
+        <div class="track-header">
+          <div class="track-icon">📱</div>
+          <div>
+            <h3>Mobile App Development Track</h3>
+            <span class="track-duration">⏱️ 4 Months • 10-15 hrs/week</span>
+          </div>
+        </div>
+        <p>Build iOS and Android apps with React Native. Learn from basics to app store deployment and monetization.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--neon-green);">🎯 What You'll Learn:</h4>
+        <div class="track-skills">
+          <span class="skill-tag">React Native</span>
+          <span class="skill-tag">JavaScript/TypeScript</span>
+          <span class="skill-tag">Mobile UI/UX</span>
+          <span class="skill-tag">APIs Integration</span>
+          <span class="skill-tag">Firebase</span>
+          <span class="skill-tag">Redux</span>
+          <span class="skill-tag">Push Notifications</span>
+          <span class="skill-tag">App Store Deploy</span>
+          <span class="skill-tag">Monetization</span>
+        </div>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--neon-green);">📚 Included Courses:</h4>
+        <ul style="color: #d0d0d0; margin-left: 1.5rem; line-height: 2;">
+          <li>JavaScript for Mobile Development</li>
+          <li>React Native - Cross Platform Apps</li>
+          <li>Mobile UI/UX Design Principles</li>
+          <li>Firebase & Backend Services</li>
+          <li>App Publishing & Monetization</li>
+          <li>Mobile App Capstone Project</li>
+        </ul>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--neon-green);">💼 Career Outcomes:</h4>
+        <ul style="color: #d0d0d0; margin-left: 1.5rem; line-height: 2;">
+          <li>Mobile App Developer positions</li>
+          <li>React Native Developer roles</li>
+          <li>3 published apps in portfolio</li>
+          <li>Guaranteed mobile dev internship</li>
+        </ul>
+
+        <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+          <a href="contact.html" class="track-btn">Enroll Now - ₹24,999</a>
+          <a href="#" class="track-btn" style="background: transparent; border: 2px solid var(--neon-green);">Download Syllabus</a>
+        </div>
+      </div>
+
+      <!-- Data Science Track -->
+      <div class="track-card">
+        <div class="track-header">
+          <div class="track-icon">📊</div>
+          <div>
+            <h3>Data Science & Analytics Track</h3>
+            <span class="track-duration">⏱️ 5 Months • 12-15 hrs/week</span>
+          </div>
+        </div>
+        <p>Master data analysis, visualization, statistics, and build data-driven solutions for business problems.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--neon-green);">🎯 What You'll Learn:</h4>
+        <div class="track-skills">
+          <span class="skill-tag">Python/R</span>
+          <span class="skill-tag">SQL Mastery</span>
+          <span class="skill-tag">Statistics</span>
+          <span class="skill-tag">Pandas & NumPy</span>
+          <span class="skill-tag">Data Visualization</span>
+          <span class="skill-tag">Tableau/Power BI</span>
+          <span class="skill-tag">Excel Advanced</span>
+          <span class="skill-tag">A/B Testing</span>
+          <span class="skill-tag">Business Analytics</span>
+        </div>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--neon-green);">📚 Included Courses:</h4>
+        <ul style="color: #d0d0d0; margin-left: 1.5rem; line-height: 2;">
+          <li>Python for Data Science</li>
+          <li>SQL for Data Analysis</li>
+          <li>Statistics & Probability</li>
+          <li>Data Visualization Mastery</li>
+          <li>Business Analytics & Reporting</li>
+          <li>Data Science Capstone Project</li>
+        </ul>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--neon-green);">💼 Career Outcomes:</h4>
+        <ul style="color: #d0d0d0; margin-left: 1.5rem; line-height: 2;">
+          <li>Data Analyst positions</li>
+          <li>Business Analyst roles</li>
+          <li>Portfolio with 10+ data projects</li>
+          <li>Guaranteed analytics internship</li>
+        </ul>
+
+        <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+          <a href="contact.html" class="track-btn">Enroll Now - ₹27,999</a>
+          <a href="#" class="track-btn" style="background: transparent; border: 2px solid var(--neon-green);">Download Syllabus</a>
+        </div>
+      </div>
+
+      <!-- UI/UX Design Track -->
+      <div class="track-card">
+        <div class="track-header">
+          <div class="track-icon">🎨</div>
+          <div>
+            <h3>UI/UX Design Track</h3>
+            <span class="track-duration">⏱️ 4 Months • 10-12 hrs/week</span>
+          </div>
+        </div>
+        <p>Learn design thinking, user research, Figma, prototyping, and build a stunning portfolio of design projects.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--neon-green);">🎯 What You'll Learn:</h4>
+        <div class="track-skills">
+          <span class="skill-tag">Design Principles</span>
+          <span class="skill-tag">Figma Mastery</span>
+          <span class="skill-tag">User Research</span>
+          <span class="skill-tag">Wireframing</span>
+          <span class="skill-tag">Prototyping</span>
+          <span class="skill-tag">Design Systems</span>
+          <span class="skill-tag">Usability Testing</span>
+          <span class="skill-tag">Adobe XD</span>
+          <span class="skill-tag">Portfolio Building</span>
+        </div>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--neon-green);">📚 Included Courses:</h4>
+        <ul style="color: #d0d0d0; margin-left: 1.5rem; line-height: 2;">
+          <li>UI/UX Design Fundamentals</li>
+          <li>Advanced Figma & Design Systems</li>
+          <li>User Research & Testing</li>
+          <li>Mobile App Design</li>
+          <li>Web Design Best Practices</li>
+          <li>Design Portfolio Capstone</li>
+        </ul>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--neon-green);">💼 Career Outcomes:</h4>
+        <ul style="color: #d0d0d0; margin-left: 1.5rem; line-height: 2;">
+          <li>UI/UX Designer positions</li>
+          <li>Product Designer roles</li>
+          <li>Portfolio with 15+ designs</li>
+          <li>Guaranteed design internship</li>
+        </ul>
+
+        <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+          <a href="contact.html" class="track-btn">Enroll Now - ₹22,999</a>
+          <a href="#" class="track-btn" style="background: transparent; border: 2px solid var(--neon-green);">Download Syllabus</a>
+        </div>
+      </div>
+
+      <!-- DevOps Track -->
+      <div class="track-card">
+        <div class="track-header">
+          <div class="track-icon">⚙️</div>
+          <div>
+            <h3>DevOps & Cloud Engineering Track</h3>
+            <span class="track-duration">⏱️ 5 Months • 15-20 hrs/week</span>
+          </div>
+        </div>
+        <p>Master CI/CD, containerization, cloud platforms, and become a DevOps engineer for modern tech companies.</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--neon-green);">🎯 What You'll Learn:</h4>
+        <div class="track-skills">
+          <span class="skill-tag">Linux & Bash</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Kubernetes</span>
+          <span class="skill-tag">AWS/Azure</span>
+          <span class="skill-tag">CI/CD Pipelines</span>
+          <span class="skill-tag">Jenkins</span>
+          <span class="skill-tag">Terraform</span>
+          <span class="skill-tag">Monitoring</span>
+          <span class="skill-tag">Git Advanced</span>
+        </div>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--neon-green);">📚 Included Courses:</h4>
+        <ul style="color: #d0d0d0; margin-left: 1.5rem; line-height: 2;">
+          <li>Linux & Command Line Mastery</li>
+          <li>Docker & Containerization</li>
+          <li>Kubernetes for Beginners</li>
+          <li>AWS Cloud Fundamentals</li>
+          <li>CI/CD with Jenkins & GitHub Actions</li>
+          <li>DevOps Capstone Project</li>
+        </ul>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--neon-green);">💼 Career Outcomes:</h4>
+        <ul style="color: #d0d0d0; margin-left: 1.5rem; line-height: 2;">
+          <li>DevOps Engineer positions</li>
+          <li>Cloud Engineer roles</li>
+          <li>AWS/Azure certifications</li>
+          <li>Guaranteed DevOps internship</li>
+        </ul>
+
+        <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+          <a href="contact.html" class="track-btn">Enroll Now - ₹32,999</a>
+          <a href="#" class="track-btn" style="background: transparent; border: 2px solid var(--neon-green);">Download Syllabus</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS SECTION -->
+  <section class="section bg-gray">
+    <h2 class="section-title">✨ What's Included in Every Track?</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">📚</div>
+        <h3>Complete Course Bundle</h3>
+        <p>All courses in the track with lifetime access</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎯</div>
+        <h3>Real Projects</h3>
+        <p>Build portfolio-worthy projects for each skill</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">👨‍🏫</div>
+        <h3>Expert Mentorship</h3>
+        <p>Weekly live sessions with industry professionals</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📜</div>
+        <h3>Certificates</h3>
+        <p>Industry-recognized certificates for each course</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💼</div>
+        <h3>Guaranteed Internship</h3>
+        <p>3-month paid internship with partner companies</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🚀</div>
+        <h3>Career Support</h3>
+        <p>Resume building, interview prep, and job referrals</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="text-center">
+      <h2 class="section-title">Ready to Start Your Learning Journey?</h2>
+      <p class="section-subtitle">Choose a track and transform your career in months, not years</p>
+      <a href="contact.html" class="btn-primary">Talk to Career Counselor →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>LearnTrack</h3>
+        <p>Empowering the next generation of tech professionals with structured learning and guaranteed career opportunities.</p>
+        <div class="social-links">
+          <a href="#" aria-label="LinkedIn">💼</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Instagram">📸</a>
+          <a href="#" aria-label="YouTube">📺</a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="courses.html">All Courses</a></li>
+          <li><a href="tracks.html">Learning Tracks</a></li>
+          <li><a href="internships.html">Internships</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul class="footer-links">
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Community</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Legal</h3>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 LearnTrack. All rights reserved. Built with 💚 for learners.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
