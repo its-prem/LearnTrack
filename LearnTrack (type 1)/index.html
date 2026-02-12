@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnTrack | Master Modern Coding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <a href="#" class="brand">
+                <div class="brand-icon">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="36" height="36" rx="8" fill="url(#gradient)"/>
+                        <path d="M12 10L18 18L12 26" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20 10L26 18L20 26" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0" y1="0" x2="36" y2="36">
+                                <stop offset="0%" stop-color="#0066FF"/>
+                                <stop offset="100%" stop-color="#00C6FF"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span>LearnTrack</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#program">Programs</a></li>
+                <li><a href="#features">Why Us</a></li>
+                <li><a href="#reviews">Success Stories</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#" class="login-link">Log In</a>
+                <a href="#program" class="btn-primary small">Start Free</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open Menu">
+                <div class="bar top"></div>
+                <div class="bar mid"></div>
+                <div class="bar bot"></div>
+            </button>
+        </div>
+
+        <div class="mobile-menu">
+            <div class="mobile-links">
+                <a href="#home" class="m-link"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="#program" class="m-link"><i class="fa-solid fa-layer-group"></i> Programs</a>
+                <a href="#features" class="m-link"><i class="fa-solid fa-star"></i> Why Us</a>
+                <a href="#reviews" class="m-link"><i class="fa-solid fa-users"></i> Reviews</a>
+            </div>
+            <div class="mobile-btns">
+                <button class="btn-primary full">Get Started</button>
+                <button class="btn-outline full">Log In</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="container hero-grid">
+            <div class="hero-text reveal">
+                <div class="status-pill">
+                    <span class="dot"></span> New Batch: Full Stack AI
+                </div>
+                <h1>Code Your Way To <br> <span class="gradient-text">Top Companies</span></h1>
+                <p>Don't just watch videos. Build real software. Live mentorship, 1:1 doubt solving, and guaranteed placement support.</p>
+                
+                <div class="hero-btns">
+                    <button class="btn-primary large shadow-glow">Explore Courses</button>
+                    <button class="btn-secondary large"><i class="fa-solid fa-play"></i> Watch Demo</button>
+                </div>
+
+                <div class="trust-strip">
+                    <div class="avatars">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+                        <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="User">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User">
+                    </div>
+                    <div class="trust-text">
+                        <strong>15,000+</strong> students placed in top companies.
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-graphic reveal delay-1">
+                <div class="orbit-container">
+                    <div class="center-logo">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <div class="ring ring-3"></div>
+                    <div class="float-icon icon-1"><i class="fa-brands fa-react"></i></div>
+                    <div class="float-icon icon-2"><i class="fa-brands fa-python"></i></div>
+                    <div class="float-icon icon-3"><i class="fa-brands fa-js"></i></div>
+                    <div class="float-icon icon-4"><i class="fa-brands fa-aws"></i></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section features" id="features">
+        <div class="container">
+            <div class="section-head center">
+                <span class="sub-head">Why LearnTrack</span>
+                <h2>We Build Careers, Not Just Courses</h2>
+            </div>
+            
+            <div class="grid-3">
+                <div class="feature-card reveal">
+                    <div class="icon-box blue"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <h3>Live Mentorship</h3>
+                    <p>Daily live classes with engineers from Google, Amazon & Microsoft.</p>
+                </div>
+                <div class="feature-card reveal delay-1">
+                    <div class="icon-box purple"><i class="fa-solid fa-diagram-project"></i></div>
+                    <h3>Project-Based Learning</h3>
+                    <p>Build 15+ industry-grade projects like Netflix Clone & E-commerce platforms.</p>
+                </div>
+                <div class="feature-card reveal delay-2">
+                    <div class="icon-box orange"><i class="fa-solid fa-rocket"></i></div>
+                    <h3>Career Support</h3>
+                    <p>Resume building, mock interviews, and exclusive referral network.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-soft" id="program">
+        <div class="container">
+            <div class="section-head">
+                <h2>Popular Programs</h2>
+                <a href="#" class="view-all">View All <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="grid-3">
+                <div class="course-card reveal">
+                    <div class="card-img gradient-1">
+                        <i class="fa-brands fa-react"></i>
+                        <span class="badge">Bestseller</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Full Stack Web Development</h3>
+                        <p class="desc">Master MERN Stack (MongoDB, Express, React, Node) from scratch with real-world projects.</p>
+                        <div class="meta">
+                            <span><i class="fa-regular fa-clock"></i> 6 Months</span>
+                            <span><i class="fa-solid fa-star text-yellow"></i> 4.9</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">₹24,999</span>
+                            <button class="btn-outline small">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card reveal delay-1">
+                    <div class="card-img gradient-2">
+                        <i class="fa-solid fa-brain"></i>
+                        <span class="badge">Trending</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Data Science & AI</h3>
+                        <p class="desc">Python, Machine Learning, Deep Learning, and Generative AI with hands-on practice.</p>
+                        <div class="meta">
+                            <span><i class="fa-regular fa-clock"></i> 8 Months</span>
+                            <span><i class="fa-solid fa-star text-yellow"></i> 4.8</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">₹34,999</span>
+                            <button class="btn-outline small">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card reveal delay-2">
+                    <div class="card-img gradient-3">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <div class="card-body">
+                        <h3>App Development</h3>
+                        <p class="desc">Build iOS and Android apps using Flutter and Dart with modern architecture.</p>
+                        <div class="meta">
+                            <span><i class="fa-regular fa-clock"></i> 5 Months</span>
+                            <span><i class="fa-solid fa-star text-yellow"></i> 4.7</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">₹19,999</span>
+                            <button class="btn-outline small">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-number">15K+</div>
+                    <div class="stat-label">Students Placed</div>
+                </div>
+                <div class="stat-item reveal delay-1">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Placement Rate</div>
+                </div>
+                <div class="stat-item reveal delay-2">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Hiring Partners</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number">12 LPA</div>
+                    <div class="stat-label">Average Package</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="brand footer-logo">
+                        <div class="brand-icon">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="36" height="36" rx="8" fill="url(#gradient2)"/>
+                                <path d="M12 10L18 18L12 26" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M20 10L26 18L20 26" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+                                <defs>
+                                    <linearGradient id="gradient2" x1="0" y1="0" x2="36" y2="36">
+                                        <stop offset="0%" stop-color="#0066FF"/>
+                                        <stop offset="100%" stop-color="#00C6FF"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <span>LearnTrack</span>
+                    </div>
+                    <p>Empowering the next generation of software engineers with industry-leading curriculum and mentorship.</p>
+                    <div class="socials">
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Our Mentors</a>
+                    <a href="#">Contact</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <a href="#">Blog</a>
+                    <a href="#">Success Stories</a>
+                    <a href="#">Community</a>
+                    <a href="#">Help Center</a>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p class="newsletter-text">Get the latest courses and career tips directly in your inbox.</p>
+                    <form class="news-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 LearnTrack Inc. All rights reserved.</p>
+                <div class="legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
